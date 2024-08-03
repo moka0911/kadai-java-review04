@@ -5,8 +5,7 @@ public class Human extends Animal implements Thinkable {
     
  // コンストラクタ
     public Human(String name, int age, String hobby) {
-        this.name = name; 
-        this.age = age;
+        super(name, age); // スーパークラスのコンストラクタを利用して名前と年齢を初期化
         this.hobby = hobby;
     }
 
@@ -19,8 +18,10 @@ public class Human extends Animal implements Thinkable {
         this.hobby = hobby;
     }
     
-    public class Human extends Animal implements Thinkable {
-       
+   // thinkメソッドの実装
+    @Override
+    public void think() {
+        System.out.println("私は" + hobby + "について考えています。");
     }
 
 }
